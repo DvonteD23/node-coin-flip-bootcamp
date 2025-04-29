@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coin Flip Game</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Coin Flip</h1>
+
+    <div class="game-layout">
+      <div class="game-section">
+        <form id="game-form">
+          <div class="field">
+            <label for="mode-select">Mode</label>
+            <select id="mode-select" name="mode">
+              <option value="single">1 Player vs Bot</option>
+              <option value="two">2 Players</option>
+            </select>
+          </div>
+
+          <!-- Player 1 -->
+          <div class="field">
+            <label for="player1-name">Player 1 Name</label>
+            <input id="player1-name" name="player1Name" required>
+          </div>
+          <div class="field">
+            <label for="player1-age">Player 1 Age</label>
+            <input id="player1-age" name="player1Age" type="number" required>
+          </div>
+
+          <!-- Player 2 -->
+          <div id="player2-section" class="field hidden">
+            <label for="player2-name">Player 2 Name</label>
+            <input id="player2-name" name="player2Name">
+          </div>
+          <div id="player2-age-section" class="field hidden">
+            <label for="player2-age">Player 2 Age</label>
+            <input id="player2-age" name="player2Age" type="number">
+          </div>
+
+  
+          <div id="single-guess" class="guess-buttons">
+            <button type="button" id="heads-btn">Heads</button>
+            <button type="button" id="tails-btn">Tails</button>
+          </div>
+
+          <div id="two-guess" class="two-guess hidden">
+            <div class="field">
+              <label for="guess1">Player 1 Guess</label>
+              <select id="guess1" name="guess1">
+                <option value="heads">Heads</option>
+                <option value="tails">Tails</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="guess2">Player 2 Guess</label>
+              <select id="guess2" name="guess2">
+                <option value="heads">Heads</option>
+                <option value="tails">Tails</option>
+              </select>
+            </div>
+            <button type="button" id="play-btn">Play!</button>
+          </div>
+        </form>
+
+        <div id="result" class="result"></div>
+      </div>
+
+      <aside class="instructions">
+        <h2>How to Play</h2>
+        <ol>
+          <li>Select 1 Player or 2 Players.</li>
+          <li>Enter name and age for each player.</li>
+          <li>
+            Make your guess:
+            <ul>
+              <li>1P: Click Heads or Tails.</li>
+              <li>2P: Choose each guess then click Play!</li>
+            </ul>
+          </li>
+          <li>See the result right here in the game area.</li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
